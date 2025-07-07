@@ -243,7 +243,13 @@ class KeyboardHumanizer:
     
     def _type_sentence(self, sentence: str) -> bool:
         """Type a single sentence"""
-        # Use engine's typing with copy-paste detection
+        # Add a small chance to make a spelling mistake and NOT fix it
+        if len(sentence) > 5 and random.random() < 0.015:  # 1.5% chance
+            idx = random.randint(1, len(sentence) - 2)
+            wrong_char = random.choice('abcdefghijklmnopqrstuvwxyz')
+            if sentence[idx] != wrong_char:
+                sentence = sentence[:idx] + wrong_char + sentence[idx+1:]
+                # Do NOT correct it, just type as is
         return self.engine.type_text(sentence, use_copy_paste=self.use_copy_paste)
     
     def _finalize_typing(self):
