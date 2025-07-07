@@ -55,7 +55,7 @@ humanizer.set_profile_by_name('professional')
 
 ## ⚙️ Settings & Configuration
 
-You can customize the humanizer’s behavior at runtime:
+You can customize the humanizer's behavior at runtime:
 
 ```python
 # View current config
@@ -106,7 +106,7 @@ humanizer.configure(
 ## 🖥️ Platform Support
 
 - **Windows, Linux, macOS**: Auto-detected, no config needed.
-- If a feature isn’t supported, you’ll get a clear error.
+- If a feature isn't supported, you'll get a clear error.
 - Requires GUI access (not headless).
 
 ---
@@ -129,3 +129,13 @@ PRs and issues welcome! See [CONTRIBUTING.md](CONTRIBUTING.md) for details.
 ## 📄 License
 
 MIT
+
+## 🧪 Advanced Testing
+
+To run the full coverage advanced keyboard test (exercises all behaviors, profiles, mistakes, corrections, and hotkeys):
+
+```bash
+python tests/test_keyboard_advanced.py
+```
+
+This will type, press keys, use hotkeys, and demonstrate all advanced behaviors for robust testing.
