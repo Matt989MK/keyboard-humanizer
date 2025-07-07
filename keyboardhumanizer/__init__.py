@@ -1,4 +1,4 @@
-from Keyboard_humanizer.core.humanizer import type_text, press_key, hotkey
+from .humanizer import type_text, press_key, hotkey
 
 def type_text(text: str):
     print(f"[Stub] Typing text: {text}")
