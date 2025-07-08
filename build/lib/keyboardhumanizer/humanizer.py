@@ -6,8 +6,8 @@ Combines typing engine with profiles for complete human typing simulation
 import time
 import random
 from typing import Optional, Dict, Any, List
-from keyboardhumanizer.typing_engine import TypingEngine, TypingStats
-from keyboardhumanizer.typing_profiles import (
+from ..core.typing_engine import TypingEngine, TypingStats
+from ..profiles.typing_profiles import (
     TypingProfile, get_profile, list_available_profiles, 
     ProfessionalProfile, CasualProfile
 )
