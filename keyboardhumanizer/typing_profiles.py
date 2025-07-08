@@ -12,7 +12,7 @@ from abc import ABC, abstractmethod
 @dataclass
 class TypingCharacteristics:
     """Defines typing behavior characteristics"""
-    base_wpm: int = 45                    # Base words per minute
+    base_wpm: int = 90                    # Base words per minute (default now 90)
     wpm_variance: int = 15                # Speed variance
     error_rate: float = 0.02              # Error rate per character
     correction_rate: float = 0.8          # Rate of error correction
@@ -102,7 +102,7 @@ class CasualProfile(TypingProfile):
     
     def get_characteristics(self) -> TypingCharacteristics:
         return TypingCharacteristics(
-            base_wpm=45,
+            base_wpm=90,  # Set to 90 WPM as new baseline
             wpm_variance=20,
             error_rate=0.025,
             correction_rate=0.75,
