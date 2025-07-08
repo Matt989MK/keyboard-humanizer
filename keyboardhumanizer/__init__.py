@@ -1,5 +1,7 @@
 from .humanizer import type_text, press_key, hotkey
 
+__version__ = '0.1.0'
+
 def type_text(text: str):
     print(f"[Stub] Typing text: {text}")
     # TODO: Implement real typing logic
